@@ -1,13 +1,7 @@
-import useData from "./useData";
-
-interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
+import platforms from "../data/platforms";
 
 function usePlatforms() {
-  return useData<Platform>("/platforms/lists/parents");
+  return { data: platforms, isLoading: false, error: null };
 }
 
 export default usePlatforms;
